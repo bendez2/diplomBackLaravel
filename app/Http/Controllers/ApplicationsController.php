@@ -327,19 +327,5 @@ class ApplicationsController extends Controller
 
         return response()->download($filepath,"Экспорт в формате CSV.csv", $headers);
     }
-
-    public function julia(){
-        DB::insert('insert into newtable (name,dates) values (?,?)', ["зашла", Carbon::now()->addHours(5)]);
-    }
-    public function juliaTry(){
-        DB::insert('insert into newtable (name,dates) values (?,?)', ["попробовала", Carbon::now()->addHours(5)]);
-    }
-    public function juliaOpenMobile(){
-        DB::insert('insert into newtable (name,dates) values (?,?)', ["зашла на сайт с телефона", Carbon::now()->addHours(5)]);
-    }
-
-    public function juliaOpenPc(){
-        DB::insert('insert into newtable (name,dates) values (?,?)', ["зашла на сайт с пк", Carbon::now()->addHours(5)]);
-    }
 }
 
